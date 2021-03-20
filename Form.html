@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>CatShop</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Main.html">Главная</a>
+            <a href="Care.html">Уход</a>
+            <a href="Contacts.html">Контакты</a>
+            <a href="Form.html">Форма заказа</a>
+        </nav>
+    </header>
+    <main>
+        <form action="#" method="POST" >
+            <fieldset>
+                <legend> Регистрация</legend>
+                <div>
+                    <input type="text" placeholder="Введите логин" name="login" required autofocus>
+                </div>
+                <div>
+                    <input type="password" placeholder="Введите пароль" name="password" required>
+                </div>
+                <div>
+                    <label>Возраст:<input type="number" name="age"></label>
+                </div>
+                <div>
+                    <span>Пол:</span>
+                    <label><input type="radio" value="1" name="age">Муж</label>
+                    <label><input type="radio" value="2" name="age">Жен</label>
+                </div>
+                <div> <input type="submit"></div>
+            </fieldset>
+        </form>
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Форма заказа</legend>
+                <div>
+                    <label for="breed">Порода:</label>
+                    <select id="breed" name="breed-cat">
+                        <option value="breed1">Оницилла</option>
+                        <option value="breed2">Бархатный кот</option>
+                        <option value="breed3">Сервал</option>
+                    </select>
+                </div>
+                <div>
+                    <span>Выберите желаемый возраст животного:</span>
+                    <label><input type="checkbox" value="1" name="age[]">от 1,5 мес до 2 мес</label>
+                    <label><input type="checkbox" value="2" name="age[]">от 2 мес до 1 года</label>
+                    <label><input type="checkbox" value="3" name="age[]">от 1 года</label>
+                </div>
+                <div>
+                    <label>Количество детей:<input type="number" min="0" max="20" name="kids>"></label>
+                </div>
+                <div>
+                    <label>Площадь жилья:<input type="number" name="home"> кв.м</label>
+                </div>
+                <div>
+                    <label>Количество животных, уже проживающих в доме: 0<input type="range" max="5" min="0" name="have-pets">5</label>
+                </div>
+                <div>
+                    <label> Когда вам удобно будет забрать питомца <input type="date" name="dayX"></label>
+                </div>
+                <div>
+                    <label>Жалаемый цвет глаз питомца: <input type="color" name="color"></label>
+                </div>
+                <div>
+                    <label for="e-mail">Введите ваш E-mail, чтобы наш сотрудник мог связаться с вами </label>
+                    <input id="e-mail" type="email" name="mail">
+                </div>
+                <div>
+                    <label for="phone">Номер телефона:</label>
+                    <input id="phone" type="text" name="phone">
+                </div>
+                <div>
+                   <label><textarea name="comment" required placeholder="Ваши пожелания и дополнительная информация"></textarea></label>
+                </div>
+                <div>
+                    <input type="submit"> 
+                    <button type="reset">Очистить</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

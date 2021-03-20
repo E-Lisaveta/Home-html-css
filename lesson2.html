@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Теги форм</title>
+</head>
+<body style="color: #3E2723; font-size: 25px">
+
+<h2>Теги элементов фромы</h2>
+
+<fieldset>
+    <legend>Тег FORM</legend>
+    <strong>&lt;form action="обработчик" method="метод_отправки_данных"
+        enctype="multipart/form-data"&gt;&lt;/form&gt;</strong> - контейнер для элементов формы
+    <h4>атрибуты тега form:</h4>
+    <ul>
+        <li><strong>action - указывает обработчик данных формы на сервере</strong></li>
+        <li><strong>method - метод, которым будут отправлены данные формы (post / get)</strong></li>
+        <li><strong>enctype="multipart/form-data" - указывается, ели в форме есть поле для загрузки файлов</strong></li>
+        <li>Доступны дополнительные атрибуты: <strong>autocomplete / disabled / name</strong></li>
+    </ul>
+</fieldset>
+<fieldset>
+    <legend>Тег FIELDSET и LEGEND</legend>
+    <strong>&lt;fieldset&gt;&lt;/fieldset&gt;</strong> - группирует связанные элементы в форме, отображается в виде
+    рамки вокруг них
+    <p>Для fieldset доступны дополнительные атрибуты: <strong>name / disabled</strong></p>
+    <strong>&lt;legend&gt;&lt;/legend&gt;</strong> - заголовок связанных элементов формы (вкладывается в fieldset)
+</fieldset>
+<fieldset>
+    <legend>Тег LABEL</legend>
+    <strong>&lt;label for="select"&gt;&lt;/label&gt;</strong> - текстовая метка для элемента
+    <p>атрибут <strong>for</strong> - привязывает label к элементу списка по id</p>
+</fieldset>
+<fieldset>
+    <legend>Теги SELECT, OPTGROUP, OPTION</legend>
+    <div><strong>&lt;select multiple size="2"&gt;&lt;/label&gt;</strong> - выпадающий список</div>
+    <div>
+        <strong>&lt;optgroup label="название группы"&gt;&lt;/optgroup&gt;</strong>
+        - группировка элементов списка (дополнительный элемент, вкладывается в select)
+    </div>
+    <div>
+        <strong>&lt;option value="значение1" selected&gt;&lt;/option&gt;</strong> - элемент списка (вкладывается в
+        select или optgroup)
+    </div>
+    <h4>атрибуты выпадающих списков:</h4>
+    <ul>
+        <li><strong>multiple</strong> - доступен множественный выбор</li>
+        <li><strong>size</strong> - количество отображаемых элементов</li>
+        <li><strong>selected</strong> - элемент отображается, как выбранный по-умолчанию</li>
+        <li>Для списков доступны дополнительные атрибуты: <strong>autofocus / disabled / required / name /
+            value</strong></li>
+    </ul>
+</fieldset>
+<fieldset>
+    <legend>Тег TEXTAREA</legend>
+    <strong>&lt;textarea cols="10" rows="5" wrap="soft"&gt;&lt;/textarea&gt;</strong> - поле для ввода многострочного
+    ввода текста
+    <h4>атрибуты textarea:</h4>
+    <ul>
+        <li><strong>cols</strong> - чило колонок</li>
+        <li><strong>rows</strong> - чило строк</li>
+        <li>
+            <strong>wrap="hard|soft|off"</strong> - перенос длинного текста - перенос может сохранятся при отправке на
+            сервер (hard),
+            перенесенный автоматически текст будет передаваться одной строкой (soft),
+            вместо переноса будет появляться полоса прокрутки (off)
+        </li>
+        <li>дополнительные атрибуты:
+            <strong>
+                autofocus / readonly / disabled / required maxlength / minlength / placeholder / name / value
+            </strong>
+        </li>
+    </ul>
+</fieldset>
+<fieldset>
+    <legend>Тег INPUT</legend>
+    <div>
+        <strong>&lt;input type=""&gt;</strong> - элемент формы. Отображение зависит от значения атрибута type <br>
+        <em>
+            * label можно привязывать к элементам на только по id, но и вклыдываю input в label, например <br>
+            &lt;label&gt;Текстовая метка&lt;input type=""&gt;&lt;/label&gt;
+        </em>
+    </div>
+    <fieldset>
+        <legend>Текстовые поля</legend>
+        <div><strong>&lt;input type="text"&gt;</strong> - для ввода текта</div>
+        <div><strong>&lt;input type="password"&gt;</strong> - для ввода пароля (скрывает вводимый текст)</div>
+        <div><strong>&lt;input type="email"&gt;</strong> - для ввода email (валидация входных данных)</div>
+        <div><strong>&lt;input type="search"&gt;</strong> - для поиска</div>
+        <div><strong>&lt;input type="url"&gt;</strong> - для ввода url (валидация входных данных)</div>
+        <p>
+            Для текстовых input доступны дополнительные атрибуты:
+            <strong>
+                autocomplete / autofocus / placeholder / readonly / disabled / required / pattern / maxlength /
+                minlength /
+                name / value
+            </strong>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Числовые поля</legend>
+        <div><strong>&lt;input type="number"&gt;</strong> - для ввода чилел</div>
+        <div><strong>&lt;input type="range"&gt;</strong> - ползунок</div>
+        <p>
+            Для числовых input доступны дополнительные атрибуты:
+            <strong>
+                autocomplete / autofocus / placeholder (только type="number") / readonly / disabled / required / pattern
+                /
+                max / min / step / name / value
+            </strong>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Загрузка файлов</legend>
+        <strong> &lt;input type="file" multiple accept="image/*"&gt;</strong> - для загрузки файлов
+        <h4>атрибуты input type="file":</h4>
+        <ul>
+            <li><strong>multiple</strong> - загрузка нескольких файлов</li>
+            <li><strong>accept</strong> - ограничение по типу файлов</li>
+            <li>дополнительные атрибуты:
+                <strong>
+                    name / disabled / required / autofocus
+                </strong>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>Взятие даты и времени</legend>
+        <p>
+            С полями для получения <strong>даты и времени</strong> следут быть осторожнее. Они по-разному
+            отображаются в различных браузерах
+            и не отображается в старых браузерах. Лучше использовать js библиотеки для формирования подобных полей
+        </p>
+        <div><strong>&lt;input type="time"&gt;</strong> - получение времени</div>
+        <div><strong>&lt;input type="date"&gt;</strong> - получение даты</div>
+        <div><strong>&lt;input type="week"&gt;</strong> - получение недели</div>
+        <div><strong>&lt;input type="month"&gt;</strong> - получение месяца</div>
+        <p>дополнительные атрибуты полей ввода даты и времени:
+            <strong>autofocus / readonly / disabled / required max / min / name / value</strong>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Чекбоксы и радиокнопки</legend>
+        <div><strong>&lt;input type="checkbox" checked&gt;</strong> - одиночный флажок</div>
+        <div><strong>&lt;input type="radio" checked&gt;</strong> - одиночная радиокнопка</div>
+        <p>
+            <strong>checked</strong> - флажок или радиокнопка отображаются, как выбранные по-умолчанию
+        </p>
+        <div>
+            <strong>Группа флажков (данные будут отправлены на сервер массивом):</strong> <br>
+            <span>&lt;input type="checkbox" name="checkbox_name[]"&gt;</span> <br>
+            <span>&lt;input type="checkbox" name="checkbox_name[]"&gt;</span> <br>
+            <span>&lt;input type="checkbox" name="checkbox_name[]"&gt;</span>
+        </div>
+
+        <div>
+            <strong>Группа радиокнопок (для выбора одного из нескольких значений):</strong> <br>
+            <span>&lt;input type="radio" name="radio_name"&gt;</span> <br>
+            <span>&lt;input type="radio" name="radio_name"&gt;</span> <br>
+            <span>&lt;input type="radio" name="radio_name"&gt;</span>
+        </div>
+        <p>дополнительные атрибуты чекбоксов и радоикнопок:
+            <strong>value / name / disabled / required / autofocus</strong>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Кнопки: теги INPUT и BUTTON</legend>
+        <div><strong>&lt;input type="button" value="Просто кнопка"&gt;</strong> - кнопка</div>
+        <div><strong>&lt;input type="reset" value="Очистить"&gt;</strong> - кнопка очистки полей формы</div>
+        <div><strong>&lt;input type="submit" value="Отправить"&gt;</strong> - кнопка отправки данных формы на обработчик, указанный в action</div>
+        <div>
+            <strong>&lt;button type="button"&gt;Просто кнопка&lt;/button&gt;</strong>
+            - кнопка
+        </div>
+        <div>
+            <strong>&lt;button type="reset"&gt;Очистить&lt;/button&gt;</strong>
+            - кнопка очистки полей формы
+        </div>
+        <div>
+            <strong>&lt;button type="submit"&gt;Отправить&lt;/button&gt;</strong>
+            - кнопка отправки данных формы на обработчик, указанный в action
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Взятие цвета</legend>
+        <strong>&lt;input type="color"&gt;</strong>
+    </fieldset>
+
+    <fieldset>
+        <legend>Скрытое поле</legend>
+        <strong>&lt;input type="hidden"&gt;</strong>
+    </fieldset>
+
+</fieldset>
+
+<fieldset>
+    <legend>Описание дополнительных атрибутов:</legend>
+    <ul>
+        <li><strong>autocomplete="on|off"</strong> - запоминание данных, введенных в текстовое поле</li>
+        <li><strong>autofocus</strong> - фокусировка на поле при загрузке страницы</li>
+        <li><strong>placeholder</strong> - подсказка</li>
+        <li><strong>readonly</strong> - не позволяет изменять значение поля (выделение и копирование текста доступны)
+        </li>
+        <li><strong>disabled</strong> - отключает возможость редактирования и копирования содержимого поля</li>
+        <li><strong>required</strong> - поле обязательно для заполнения</li>
+        <li><strong>pattern</strong> - проверяет поле на сответствие регулярному выражению</li>
+        <li><strong>maxlength</strong> - ограничивает ввод текстовых данных</li>
+        <li><strong>minlength</strong> - ограничивает ввод текстовых данных</li>
+        <li><strong>max</strong> - ограничивает ввод числовых данных</li>
+        <li><strong>min</strong> - ограничивает ввод числовых данных</li>
+        <li><strong>step</strong> - шаг при вводе числовых данных</li>
+        <li>
+            <strong>name</strong>
+            - имя, которое будет использовано для доступа к элементу
+            (для доступа к элементу из javascript, для доступа к пользовательскому вводу или выбору на сервере)
+        </li>
+        <li><strong>value</strong> - текст, отображаемый на кнопке, в поле или связанный с полем текст (обычно,
+            пользовательский ввод или выбор)
+        </li>
+    </ul>
+</fieldset>
+
+</body>
+</html>
+© 2021 GitHub, Inc.
